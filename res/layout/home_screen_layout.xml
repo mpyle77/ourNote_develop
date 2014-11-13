@@ -10,21 +10,30 @@
 
     <Button 
         android:id="@+id/manage_notes"
-        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Notes"
         android:layout_marginTop="20dp"
         />
     
    <Button 
         android:id="@+id/manage_geo_btn"
-        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_below="@id/manage_notes"
+        android:text="Geo"
         android:layout_marginTop="20dp"
         />
    
    <Button 
         android:id="@+id/manage_friends_btn"
-        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_below="@id/manage_geo_btn"
+        android:text="Friends"
         android:layout_marginTop="20dp"
         />
    

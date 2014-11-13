@@ -2,10 +2,11 @@ package com.pyle.michael.storage;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+	public static final String TAG = "DatabaseHelper";
 	
 	private static final String DATABASE_NAME = "ournote.db";
 	private static final int DATABASE_VERSION = 1;
@@ -16,7 +17,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
+		Log.d(TAG, "onCreate");
 		db.execSQL(GeoFenceTable.onCreate());
+		db.execSQL(GeoFenceTable.TestDataInsert());
 //		db.execSQL(NoteTable.onCreate());
 //		db.execSQL(UserTable.onCreate());
 //		db.execSQL(UserTable.onCreate());

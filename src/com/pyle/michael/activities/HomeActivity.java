@@ -2,6 +2,7 @@ package com.pyle.michael.activities;
 
 import com.pyle.michael.R;
 import com.pyle.michael.contracts.ActivitiesContract.LaunchActivity;
+import com.pyle.michael.storage.DbDataSource;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
@@ -20,6 +21,9 @@ public class HomeActivity extends ActionBarActivity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_screen_layout);
+		
+		DbDataSource dataSource = new DbDataSource(this);
+		dataSource.openDb();
 	}
 
 	@Override

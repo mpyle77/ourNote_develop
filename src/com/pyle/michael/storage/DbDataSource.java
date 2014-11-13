@@ -4,13 +4,13 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 
-public class DataSource {
-	public static final String TAG = "DataSource";
+public class DbDataSource {
+	public static final String TAG = "DbDataSource";
 	
 	SQLiteDatabase db;
 	DatabaseHelper dbHelper;
 	
-	public DataSource (Context ctx) {
+	public DbDataSource (Context ctx) {
 		dbHelper = new DatabaseHelper(ctx);
 	}
 	
@@ -21,5 +21,11 @@ public class DataSource {
 	public void closeDb() {
 		db.close();
 	}
+	
+	//Methods to retrieve a Note
+	
+	//Methods to retrieve a User
+	
+	//Methods to retrieve a GeoFence
 
 }
